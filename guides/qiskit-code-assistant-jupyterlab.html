@@ -14,7 +14,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.cf54faa5.css">
-<script src="/assets/js/runtime~main.3d63d43e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e47f7645.js" defer="defer"></script>
 <script src="/assets/js/main.baff262c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -25,7 +25,7 @@
 <!-- -->
 <header><h1>Використання Qiskit Code Assistant у JupyterLab</h1></header>
 <p>Дізнайся, як встановити, використовувати, налаштувати та видалити офіційне розширення Qiskit Code Assistant для JupyterLab.</p>
-<div style="margin:1rem 0"><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px"><iframe src="https://video.ibm.com/embed/recorded/134371941" title="A user uses Qiskit Code Assistant in JupyterLab. The user has a comment in the code to get the available backends for their account in IBM Quantum. Qiskit Code Assistant gives a code suggestion to get the available backends. The user executes the code, gets the available backends in IBM Quantum Platform for the current account. The user asks Qiskit Code Assistant to generate the code to get the T1, T2 and other properties for the qubit 1 in the device ibm_brisbane. The assistant gives a code suggestion. The user runs the suggested code and gets the desired output." style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe></div></div>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="install-the-jupyterlab-extension">Встановлення розширення JupyterLab<a href="#install-the-jupyterlab-extension" class="hash-link" aria-label="Пряме посилання на Встановлення розширення JupyterLab" title="Пряме посилання на Встановлення розширення JupyterLab" translate="no">​</a></h2>
 <p>Щоб встановити <a href="https://github.com/Qiskit/qiskit-code-assistant-jupyterlab" target="_blank" rel="noopener noreferrer" class="">розширення JupyterLab</a>, виконай таку команду в терміналі:</p>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">pip </span><span class="token function" style="color:#d73a49">install</span><span class="token plain"> qiskit-code-assistant-jupyterlab</span><br></span></code></pre></div></div>
@@ -39,7 +39,7 @@
 <p>Натисни <strong>Inline Completer</strong>, знайди &quot;Show widget&quot; і вибери <strong>Always</strong>. Це означає, що віджет вбудованого доповнення завжди відображатиметься, щоб ти міг(-ла) переглядати і вибирати варіанти доповнення.</p>
 </li>
 <li class="">
-<p>Натисни <strong>Code Completion</strong> і збільш значення параметра &quot;Default timeout for a provider.&quot; до <code>10000</code> або 10 секунд. Стандартне значення — 1 секунда, але Qiskit Code Assistant API може витрачати більше часу на пошук підказки. Це налаштування стосується лише стандартного контекстного меню, що викликається клавішею <code>Tab</code>. Для вбудованого доповнення стандартне значення становить 10 секунд.</p>
+<p>Натисни <strong>Code Completion</strong> і збільш значення параметра &quot;Default timeout for a provider.&quot; до <code>10000</code> або 10 секунд. Стандартне значення — 1 секунда, але Qiskit Code Assistant API може витрачати більше часу на пошук підказки. Це  налаштування стосується лише стандартного контекстного меню, що викликається клавішею <code>Tab</code>. Для вбудованого доповнення стандартне значення становить 10 секунд.</p>
 </li>
 </ul>
 <p>Інші параметри, які ти можеш змінити:</p>
@@ -51,7 +51,7 @@
 <p>Ти можеш змінити токен IBM Quantum API в палітрі команд JupyterLab. Для цього натисни <code>Alt</code> + <code>Shift</code> + <code>C</code>, знайди <code>qiskit</code>, вибери команду <strong>Qiskit Code Assistant: Set IBM Quantum API token</strong> і встав свій ключ.</p>
 </li>
 <li class="">
-<p>[Розширено] Щоб змінити екземпляр сервісу Qiskit Code Assistant, який викори стовує розширення, відредагуй параметр <code>serviceUrl</code> у налаштуваннях Qiskit Code Assistant.</p>
+<p>[Розширено] Щоб змінити екземпляр сервісу Qiskit Code Assistant, який використовує розширення, відредагуй параметр <code>serviceUrl</code> у налаштуваннях Qiskit Code Assistant.</p>
 </li>
 <li class="">
 <p>[Розширено] Комбінації клавіш можна змінити, знайшовши <code>completer</code> у налаштуваннях клавіатурних скорочень (Settings -&gt; Settings Editor -&gt; Keyboard Shortcuts) і додавши нові скорочення для відповідних команд.</p>

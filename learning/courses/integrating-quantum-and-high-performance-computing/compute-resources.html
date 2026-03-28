@@ -14,7 +14,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.cf54faa5.css">
-<script src="/assets/js/runtime~main.3d63d43e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e47f7645.js" defer="defer"></script>
 <script src="/assets/js/main.baff262c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,7 +26,7 @@
 <header><h1>Обчислювальні ресурси та управління ресурсами</h1></header>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="resource-model-and-classical-resources">Модель ресурсів та класичні ресурси<a href="#resource-model-and-classical-resources" class="hash-link" aria-label="Пряме посилання на Модель ресурсів та класичні ресурси" title="Пряме посилання на Модель ресурсів та класичні ресурси" translate="no">​</a></h2>
 <p>У цьому розділі ми надамо основу для розуміння обчислювальних середовищ, яку можна застосувати як до ноутбука, так і масштабувати до суперкомп&#x27;ютерів. Наприкінці цього розділу ви зрозумієте основні компоненти обчислювального середовища та їх взаємозв&#x27;язок. Усе це викладає Іскандар Сітдіков у наступному відео.</p>
-<div style="margin:1rem 0"><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px"><iframe src="https://video.ibm.com/embed/recorded/134680652" title="У цьому відео Іскандар Сітдіков описує важливі показники обчислювальних ресурсів, що застосовуються до простих систем, як-от ноутбук, аж до гетерогенних середовищ HPC" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe></div></div>
+<!-- -->
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="resource-model">Модель ресурсів<a href="#resource-model" class="hash-link" aria-label="Пряме посилання на Модель ресурсів" title="Пряме посилання на Модель ресурсів" translate="no">​</a></h3>
 <p>Будь-яке класичне обчислювальне середовище побудовано з кількох взаємопов&#x27;язаних ресурсів, що працюють разом для ефективного виконання програм. Основні ресурси зазвичай включають:</p>
 <ul>
@@ -34,7 +34,7 @@
 <p>ЦП (центральний процесор): ЦП є основним обчислювальним блоком, який інтерпретує та виконує інструкції програми. Він обробляє логічні, арифметичні та керуючі операції, по суті виступаючи &quot;мозком&quot; системи.</p>
 </li>
 <li class="">
-<p>Кеш ЦП (L1, L2, L3): Це найшвидша пам&#x27;ять у системі, вбудована безпосередньо в ядро ЦП або розташована дуже близько до нього. Вона зберігає невеликі порції даних та інструкцій, які ЦП потребує негайно. Різні рівні (L1, L2, L3) являють собою компроміс: L1 є найменшим і найшвидшим, тоді як L3 є найбільшим і найповільнішим, але все одно на порядки швидшим за оперативну пам&#x27;ять.</p>
+<p>Кеш ЦП (L1, L2, L3): Це на йшвидша пам&#x27;ять у системі, вбудована безпосередньо в ядро ЦП або розташована дуже близько до нього. Вона зберігає невеликі порції даних та інструкцій, які ЦП потребує негайно. Різні рівні (L1, L2, L3) являють собою компроміс: L1 є найменшим і найшвидшим, тоді як L3 є найбільшим і найповільнішим, але все одно на порядки швидшим за оперативну пам&#x27;ять.</p>
 </li>
 <li class="">
 <p>Оперативна пам&#x27;ять (RAM): Енергозалежна пам&#x27;ять, що забезпечує великий тимчасовий простір для зберігання інструкцій програми та активно використовуваних даних. Вона гарантує, що ЦП може швидко отримати доступ до необхідної інформації під час виконання без постійної залежності від повільніших пристроїв зберігання.</p>
