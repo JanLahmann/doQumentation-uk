@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.171a766f.css">
-<script src="/assets/js/runtime~main.2ffcdcf7.js" defer="defer"></script>
-<script src="/assets/js/main.68138881.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4218806b.js" defer="defer"></script>
+<script src="/assets/js/main.510e2296.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -27,13 +27,16 @@
 <header><h1>Вступ до квантового машинного навчан ня</h1></header>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview-and-motivation">Огляд і мотивація<a href="#overview-and-motivation" class="hash-link" aria-label="Пряме посилання на Огляд і мотивація" title="Пряме посилання на Огляд і мотивація" translate="no">​</a></h2>
 <p>Перш ніж розпочати, будь ласка, заповни це коротке <a href="https://your.feedback.ibm.com/jfe/form/SV_8wdBVMmnHcD5zg2" target="_blank" rel="noopener noreferrer" class="">опитування перед курсом</a>, яке допоможе нам покращити наші матеріали та досвід користувача.</p>
+<blockquote>
+<p><strong>Note:</strong> This survey is provided by IBM Quantum and relates to the original English content. To give feedback on doQumentation&#x27;s website, translations, or code execution, please <a href="https://github.com/JanLahmann/doQumentation/issues" target="_blank" rel="noopener noreferrer" class="">open a GitHub issue</a>.</p>
+</blockquote>
 <p>Ласкаво просимо до квантового машинного навчання!</p>
 <p>Відео нижче дасть короткий вступ, доповнений текстом нижче.</p>
 <!-- -->
 <p>Коротко підсумуємо та доповнимо відео:</p>
 <ul>
 <li class="">Ми бачили, як задачу вперше розв&#x27;язано на квантовому комп&#x27;ютері, а потім знаходили класичний спосіб розв&#x27;язати її на класичному суперкомп&#x27;ютері. Цей цикл взаємного підштовхування класичних і квантових обчислень до їхніх меж, мабуть, продовжуватиметься ще кілька років.</li>
-<li class="">Існують конкретні задачі, де квантові обчислення можуть мати доведену перевагу над класичними за умови прогресу у зменшенні помилок і збільшенні кількості доступних кубітів. Але зараз ще час дослідження — пошуку квантово-придатних наборів даних та корисних квантових карт ознак.</li>
+<li class="">Існують конкретні задачі, де квантові  обчислення можуть мати доведену перевагу над класичними за умови прогресу у зменшенні помилок і збільшенні кількості доступних кубітів. Але зараз ще час дослідження — пошуку квантово-придатних наборів даних та корисних квантових карт ознак.</li>
 <li class="">Квантове машинне навчання (QML) — одна з багатьох захопливих областей, де квантові обчислення можуть доповнювати існуючі класичні робочі процеси.</li>
 </ul>
 <p>Машинне навчання (ML) застосовує алгоритми до наборів даних, тому QML може включати квантову механіку як у даних, так і в алгоритмічній стороні, або в обох. Всі ці можливості потенційно цікаві. Але ми переважно обмежуватимемося обговоренням квантових алгоритмів, застосованих до класичних даних. Одна причина — задачі ML з класичними даними вже настільки добре вивчені та широко доступні. Широкий інтерес до розв&#x27;язання задач, що починаються з класичних даних. Інша причина — відсутність QRAM. Без можливості зберігати великі обсяги квантових даних на відносно тривалий час методи, що починаються з квантових даних, ще далекі від застосовності в промисловості. Також незрозуміло, як ефективно «квантово-отримувати доступ» до класичних даних. Два типи ML, що особливо цікавлять, — це навчання з учителем, де алгоритм тренується на маркованому наборі даних, і навчання без учителя, де алгоритм намагається вивчити розподіл за немаркованими прикладами. Алгоритм без учителя може, наприклад, навчитися генерувати нові зразки з того самого розподілу або кластеризувати зразки у групи зі схожими характеристиками.</p>
