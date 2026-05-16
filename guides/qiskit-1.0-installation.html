@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.3e9d86b2.js" defer="defer"></script>
-<script src="/assets/js/main.01cbe6f2.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.434eacf8.js" defer="defer"></script>
+<script src="/assets/js/main.93792cc7.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -180,10 +180,10 @@
 <p>Також можеш прочитати <a href="https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts" target="_blank" rel="noopener noreferrer" class="">документацію від Python Packaging Authority про вирішення конфліктів</a>.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pip-succeeds-but-prints-errors-after-running-pip-install-commands"><code>pip</code> виконується успішно, але виводить помилки після запуску команд <code>pip install</code><a href="#pip-succeeds-but-prints-errors-after-running-pip-install-commands" class="hash-link" aria-label="Пряме посилання на pip-succeeds-but-prints-errors-after-running-pip-install-commands" title="Пряме посилання на pip-succeeds-but-prints-errors-after-running-pip-install-commands" translate="no">​</a></h3>
 <p>У виводі <code>pip</code> ти можеш побачити помилку, наприклад таку:</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">ERROR: pip&#x27;s dependency resolver does not currently take into account all the packages that are installed. This behavior is the source of the following dependency conflicts.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">some-distribution 0.4.4 requires qiskit&gt;=0.44,&lt;1, but you have qiskit 1.0.0 which is incompatible.</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">ERROR: pip&#x27;s dependency resolver does not currently take into account all the packages that are installed. This behavior is the source of the following dependency conflicts.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">some-distribution 0.4.4 requires qiskit&gt;=0.44,&lt;1, but you have qiskit v1.0.0 which is incompatible.</span><br></span></code></pre></div></div>
 <p>Перший рядок зазвичай виглядає так само (станом на <code>pip</code> 23.3), але другий змінюється залежно від конкретної проблеми, і таких рядків може бути кілька.
 <code>pip</code>, мабуть, далі повідомить, що виконав бажану дію успішно, незважаючи на повідомлення про помилку.</p>
-<p>Це означає, що середовище перебуває в конфлікті, і ти не можеш бути впевнений, що воно працюватиме правильно.
+<p>Це означає, що середовище перебуває в конфлікті, і ти не можеш бути  впевнений, що воно працюватиме правильно.
 Щоб вирішити проблему, вивчи список повідомлень від <code>pip</code> і визнач, чи потрібні тобі всі пакунки з конфліктуючими вимогами.
 Іноді існують справжні конфлікти між залежностями; тобі може знадобитися кілька віртуальних середовищ для розділення залежностей із несумісними вимогами.</p>
 <p>Найбезпечніший вибір — почати нове віртуальне середовище (або кілька, якщо є справжні конфлікти), а потім видалити конфліктне.</p>
@@ -204,7 +204,7 @@ Qiskit unfortunately cannot enforce this requirement during environment resoluti
 <p>Помилка означає, що Qiskit встановлено у невалідному середовищі, яке містить одночасно Qiskit 1.0 і більш ранню версію.
 Характерною ознакою є встановлення дистрибутиву <code>qiskit-terra</code> поруч із Qiskit 1.0.
 Ти можеш перевірити, які дистрибутиви встановлені, запустивши <code>pip list</code>, але це виправити неможливо простим видаленням <code>qiskit-terra</code>.</p>
-<p>На жаль, <code>qiskit&gt;=1.0</code> і <code>qiskit-terra</code> є конфл іктуючими дистрибутивами та не можуть бути встановлені одночасно.
+<p>На жаль, <code>qiskit&gt;=1.0</code> і <code>qiskit-terra</code> є конф ліктуючими дистрибутивами та не можуть бути встановлені одночасно.
 Ще більш прикро, що <em>ми не можемо повідомити про цей конфлікт <code>pip</code></em> через обмеження його системи метаданих.</p>
 <p>Ця помилка найчастіше виникає в одній із двох ситуацій:</p>
 <ul>
@@ -243,7 +243,7 @@ Qiskit unfortunately cannot enforce this requirement during environment resoluti
 Зазвичай це характеризується тим, що встановлений дистрибутив <em>не</em> є останньою версією, хоча у твоїй команді встановлення версія не була вказана.
 Перевірити останню версію релізу дистрибутиву можна на його сторінці на <a href="https://pypi.org/" target="_blank" rel="noopener noreferrer" class="">https://pypi.org/</a>.</p>
 <p><code>pip</code>, мабуть, переглядав старі версії пакунку, доки не знайшов одну (можливо, кількамісячної або кількарічної давнини), що залежала лише від <code>qiskit-terra</code>.</p>
-<p>Саме це сталося в прикладі ви ще. На момент написання цього документа <code>qiskit-dynamics==0.4.4</code> була останньою релізною версією.</p>
+<p>Саме це сталося в прикладі в ище. На момент написання цього документа <code>qiskit-dynamics==0.4.4</code> була останньою релізною версією.</p>
 </li>
 </ul>
 <p>Якщо ти збирав це середовище за допомогою кількох команд <code>pip install</code> (наприклад, якщо середовище старе і вже оновлювалося), спочатку спробуй встановити всі пакунки за допомогою однієї команди <code>pip install</code> при побудові нового середовища.
@@ -260,7 +260,7 @@ Qiskit unfortunately cannot enforce this requirement during environment resoluti
 Якщо <code>pip</code> успішно вирішить цей граф залежностей, у тебе буде робоче віртуальне середовище.
 Якщо хоча б один дистрибутив вимагає Qiskit 1.0 або вище, <code>pip</code> має повідомити тебе про це, що буде схоже на повідомлення в <a href="#pip-resolution-impossible" class="">розділі про невдалі резолюції</a>.</p>
 <p>Також можна використовувати команди <code>pipdeptree</code>, наведені в <a href="#debug-venv-for-1.0" class="">Створи робоче середовище для Qiskit 1.0</a>, у межах зламаного середовища, щоб визначити, які дистрибутиви мають явну вимогу на <code>qiskit&gt;=1</code>.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="im-a-developer-my-environments-are-definitely-right-and-im-still-getting-the-error">Я розробник, мої середовища точно правильні, але помилка все одно виникає<a href="#im-a-developer-my-environments-are-definitely-right-and-im-still-getting-the-error" class="hash-link" aria-label="Пряме посилання на Я розробник, мої середовища точно правильні, але помилка все одно виникає" title="Пряме посилання на Я розробник, мої середовища точно правильні, але помилка все одно ви никає" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="im-a-developer-my-environments-are-definitely-right-and-im-still-getting-the-error">Я розробник, мої середовища точно правильні, але помилка все одно виникає<a href="#im-a-developer-my-environments-are-definitely-right-and-im-still-getting-the-error" class="hash-link" aria-label="Пряме посилання на Я розробник, мої середовища точно правильні, але помилка все одно виникає" title="Пряме посилання на Я розробник, мої середовища точно правильні, але помилка все одно в иникає" translate="no">​</a></h4>
 <p>По-перше: ти маєш бути <em>абсолютно</em> впевнений, що твої середовища правильні.
 Перевірка, яку Qiskit використовує для визначення зламаного середовища, є досить надійною; зокрема, вона запитує <code>importlib.metadata</code> про інформацію про дистрибутиви встановлених пакунків і перевіряє повернуті номери версій.
 Сторона Qiskit 1.0 у перевірці також шукає sentinel-файли, що були присутні у старих версіях Qiskit і відсутні в Qiskit 1.0.</p>
