@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.3b1616bd.js" defer="defer"></script>
-<script src="/assets/js/main.bb19ed13.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5042857f.js" defer="defer"></script>
+<script src="/assets/js/main.7d794e09.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/calibration-jobs" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/calibration-jobs" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,51 +28,81 @@
 <p>Щоб забезпечити стабільну продуктивність, квантові комп&#x27;ютери IBM® часто моніторяться для відстеження параметрів, які можуть дрейфувати з часом, калібруються за потреби та щодня проходять бенчмаркінг. На цій сторінці детально описано три процеси — моніторинг, калібрування та бенчмаркінг, — які разом забезпечують максимально стабільну, передбачувану та доступну для користувачів роботу парку квантових комп&#x27;ютерів IBM.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitoring">Моніторинг<a href="#monitoring" class="hash-link" aria-label="Пряме посилання на Моніторинг" title="Пряме посилання на Моніторинг" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="parameter-monitoring">Моніторинг параметрів<a href="#parameter-monitoring" class="hash-link" aria-label="Пряме посилання на Моніторинг параметрів" title="Пряме посилання на Моніторинг параметрів" translate="no">​</a></h3>
-<p>Короткі завдання моніторингу параметрів виконуються приблизно раз на годину, автоматично чергуючись із завданнями користувачів, з використанням повного програмного стека Qiskit Runtime. Результати цих завдань аналізуються для перевірки того, чи почали будь-які параметри відхилятися від допустимих діапазонів, в ідеалі виявляючи проблеми ще до того, як вони стануть достатньо значущими, щоб помітно вплинути на продуктивність.</p>
+<p>Короткі завдання моніторингу параметрів виконуються приблизно раз на годину, автоматично чергуючись із завданнями користувачів, з використанням повного програмного стека IBM Quantum Compute Service. Результати цих завдань аналізуються для перевірки того, чи почали будь-які параметри відхилятися від допустимих діапазонів, в ідеалі виявляючи проблеми ще до того, як вони стануть достатньо значущими, щоб помітно вплинути на продуктивність.</p>
 <p>До деяких параметрів, що моніторяться, належать:</p>
 <ul>
-<li class="">Кути зчитування, амплітуди та поріг дискримінатора, що забезпечують точне розрізнення станів, малі витоки та стабільну роботу. Це включає робочі параметри наших квантово-обмежених підсилювачів.</li>
-<li class="">Одно- та двокубітні операції воріт, підтверджуючи їх правильну роботу для підтримки коректних кутів обертання та мінімізації похибок фази та амплітуди.</li>
-<li class="">Ознаки активності TLS.</li>
+<li class="">
+<p>Кути зчитування, амплітуди та поріг дискримінатора, що забезпечують точне розрізнення станів, малі витоки та стабільну роботу. Це включає робочі параметри наших квантово-обмежених підсилювачів.</p>
+</li>
+<li class="">
+<p>Одно- та двокубітні операції воріт, підтверджуючи їх правильну роботу для підтримки коректних кутів обертання та мінімізації похибок фази та амплітуди.</p>
+</li>
+<li class="">
+<p>Ознаки активності TLS.</p>
+</li>
 </ul>
 <p>Якщо результати цих завдань моніторингу вказують на незначні відхилення від очікуваної продуктивності, запускаються відповідні калібрувальні завдання. Якщо виявлено значну активність TLS, стратегія калібрування для воріт, пов&#x27;язаних з ураженими кубітами, може автоматично змінюватися (і може включати призупинення калібрувань) доти, доки активність TLS не повернеться до прийнятних рівнів.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="holistic-monitoring">Комплексний моніторинг<a href="#holistic-monitoring" class="hash-link" aria-label="Пряме посилання на Комплексний моніторинг" title="Пряме посилання на Комплексний моніторинг" translate="no">​</a></h3>
-<p>Окрім завдань моніторингу окремих параметрів, є завдання, що відстежують продуктивність квантового комп&#x27;ютера більш комплексно: наприклад, тести, що перевіряють точність згенерованих станів Белла, а також тести дробових воріт і динамічних схем на квантових комп&#x27;ютерах, що підтримують ці функції. Мета цих тестів, які також виконуються через повний стек Qiskit Runtime в чергуванні із завданнями користувачів, — ефективно перевіряти загальну поведінку апаратного та програмного забезпечення. Якщо ці тести виявлять значне падіння продуктивності, квантовий комп&#x27;ютер автоматично призупинить чергу завдань до вирішення проблеми, гарантуючи, що завдання користувачів не виконуватимуться, доки пристрій не відновить очікувану продуктивність.</p>
+<p>Окрім завдань моніторингу окремих параметрів, є завдання, що відстежують продуктивність квантового комп&#x27;ютера більш комплексно: наприклад, тести, що перевіряють точність згенерованих станів Белла, а також тести дробових воріт і динамічних схем на квантових комп&#x27;ютерах, що підтримують ці функції. Мета цих тестів, які також виконуються через повний стек Quantum Compute в чергуванні із завданнями користувачів, — ефективно перевіряти загальну поведінку апаратного та програмного забезпечення. Якщо ці тести виявлять значне падіння продуктивності, квантовий комп&#x27;ютер автоматично призупинить чергу завдань до вирішення проблеми, гарантуючи, що завдання користувачів не виконуватимуться, доки пристрій не відновить очікувану продуктивність.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="calibrating">Калібрування<a href="#calibrating" class="hash-link" aria-label="Пряме посилання на Калібрування" title="Пряме посилання на Калібрування" translate="no">​</a></h2>
 <p>Калібрування запускаються щоразу, коли завдання моніторингу вказують на відхилення таких параметрів, як амплітуди або кути імпульсів від їхніх ідеальних значень. Вони виконуються протягом дня між завданнями користувачів, тому немає фіксованого часу початку та завершення калібрувань. Вони виконуються лише на кубітах/воротах, для яких моніторинг параметрів виявив конкретні проблеми, разом з будь-якими кубітами, необхідними для одночасного запуску згідно з конкретними правилами пакетування. На QPU типу Heron загальний час, витрачений на калібрування, як правило, становить менше двох годин на день.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single-qubit-operations">Операції з одиночними кубітами<a href="#single-qubit-operations" class="hash-link" aria-label="Пряме посилання на Операції з одиночними кубітами" title="Пряме посилання на Операції з одиночними кубітами" translate="no">​</a></h3>
 <p>Ці калібрування забезпечують точну реалізацію одиночних квантових воріт: sx, x, rx (дробові). Регулюються:</p>
 <ul>
-<li class="">Частоти кубітів</li>
-<li class="">Амплітуди та фази імпульсів</li>
+<li class="">
+<p>Частоти кубітів</p>
+</li>
+<li class="">
+<p>Амплітуди та фази імпульсів</p>
+</li>
 </ul>
 <p>Ці калібрування пакетуються по ураженим кубітам і виконуються паралельно там, де це доцільно, зі стратегіями пакетування, адаптованими до кожного типу калібрування.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-qubit-operations">Двокубітні операції<a href="#two-qubit-operations" class="hash-link" aria-label="Пряме посилання на Двокубітні операції" title="Пряме посилання на Двокубітні операції" translate="no">​</a></h3>
 <ul>
-<li class="">Амплітуди та фази воріт CZ і RZZ (для процесорів Heron і Nighthawk)</li>
-<li class="">Амплітуди та фази воріт ECR (для процесорів Eagle)</li>
+<li class="">
+<p>Амплітуди та фази воріт CZ і RZZ (для процесорів Heron і Nighthawk)</p>
+</li>
+<li class="">
+<p>Амплітуди та фази воріт ECR (для процесорів Eagle)</p>
+</li>
 </ul>
 <p>Ці калібрування виконуються пакетами ненайближчих сусідніх кубітів для мінімізації перехресних завад.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="readout">Зчитування<a href="#readout" class="hash-link" aria-label="Пряме посилання на Зчитування" title="Пряме посилання на Зчитування" translate="no">​</a></h3>
 <ul>
-<li class="">Кути імпульсів зчитування</li>
-<li class="">Параметри дискримінації вимірювань</li>
+<li class="">
+<p>Кути імпульсів зчитування</p>
+</li>
+<li class="">
+<p>Параметри дискримінації вимірювань</p>
+</li>
 </ul>
 <p>Ці калібрування виконуються одночасно на кубітах, що потребують калібрування.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-calibrations-are-scheduled">Як плануються калібрування<a href="#how-calibrations-are-scheduled" class="hash-link" aria-label="Пряме посилання на Як плануються калібрування" title="Пряме посилання на Як плануються калібрування" translate="no">​</a></h3>
 <ul>
-<li class="">Калібрувальне завдання не може виконуватися одночасно з завданням або сесією.</li>
-<li class="">Тому під час тривалих сесій квантовий комп&#x27;ютер може відчувати знижену ефективну стабільність через затримку або нечасте перекалібрування.</li>
-<li class="">Два завдання, надіслані одночасно, можуть виконуватися з різними наборами калібрувань залежно від часу.</li>
+<li class="">
+<p>Калібрувальне завдання не може виконуватися одночасно з завданням або сесією.</p>
+</li>
+<li class="">
+<p>Тому під час тривалих сесій квантовий комп&#x27;ютер може відчувати знижену ефективну стабільність через затримку або нечасте перекалібрування.</p>
+</li>
+<li class="">
+<p>Два завдання, надіслані одночасно, можуть виконуватися з різними наборами калібрувань залежно від часу.</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benchmarking">Бенчмаркінг<a href="#benchmarking" class="hash-link" aria-label="Пряме посилання на Бенчмаркінг" title="Пряме посилання на Бенчмаркінг" translate="no">​</a></h2>
 <p>Щоденний бенчмаркінг дає всебічну картину продуктивності квантового комп&#x27;ютера та генерує метрики, що надходять до користувачів через Qiskit. Вони допомагають користувачам вибирати кубіти, оптимізувати компіляцію та краще передбачати очікувану продуктивність схем. Відображувані числа можна переглянути програмно або на сторінці <a href="https://quantum.cloud.ibm.com/computers" target="_blank" rel="noopener noreferrer" class="">Compute resources</a> (натисни на будь-який QPU, щоб відкрити детальну інформаційну картку). Детальніше про кожну метрику — в <a class="" href="/guides/qpu-information">документації</a>.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Дрейф пристрою</div><div class="admonitionContent_BuS1"><p>Вплив дрейфу пристрою (погіршення продуктивності апаратного забезпечення з часом) залежить від багатьох факторів, таких як час останнього калібрування, конкретний проведений експеримент, активність TLS тощо. Якщо конкретне робоче навантаження дуже чутливе до значень похибок параметрів пристрою, ти можеш виконати бенчмаркінг параметрів пристрою в реальному часі, дотримуючись <a class="" href="/tutorials/real-time-benchmarking-for-qubit-selection">цього туторіалу</a> в IBM Quantum Learning.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single-qubit-performance">Продуктивність одиночних кубітів<a href="#single-qubit-performance" class="hash-link" aria-label="Пряме посилання на Продуктивність одиночних кубітів" title="Пряме посилання на Продуктивність одиночних кубітів" translate="no">​</a></h3>
 <ul>
-<li class=""><a class="" href="/guides/qpu-information#median-sx-error">Рандомізований бенчмаркінг</a> (RB) у пакетних групах</li>
-<li class="">Часи когерентності <a class="" href="/guides/qpu-information#t1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a> та <a class="" href="/guides/qpu-information#t2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a></li>
-<li class=""><a class="" href="/guides/qpu-information#median-readout-error">Метрики точності вимірювань</a></li>
+<li class="">
+<p><a class="" href="/guides/qpu-information#median-sx-error">Рандомізований бенчмаркінг</a> (RB) у пакетних групах</p>
+</li>
+<li class="">
+<p>Часи когерентності <a class="" href="/guides/qpu-information#t1"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a> та <a class="" href="/guides/qpu-information#t2"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span></span></span></span></a></p>
+</li>
+<li class="">
+<p><a class="" href="/guides/qpu-information#median-readout-error">Метрики точності вимірювань</a></p>
+</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-qubit-performance">Продуктивність двокубітних операцій<a href="#two-qubit-performance" class="hash-link" aria-label="Пряме посилання на Продуктивність двокубітних операцій" title="Пряме посилання на Продуктивність двокубітних операцій" translate="no">​</a></h3>
 <ul>

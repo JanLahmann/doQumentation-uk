@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.3b1616bd.js" defer="defer"></script>
-<script src="/assets/js/main.bb19ed13.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5042857f.js" defer="defer"></script>
+<script src="/assets/js/main.7d794e09.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/about/code-modifications" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -37,12 +37,16 @@ Engine</strong>, ти отримуєш копію оригінального н�
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-prerequisites-cell-code">2. Клітинка з передумовами (код)<a href="#2-prerequisites-cell-code" class="hash-link" aria-label="Пряме посилання на 2. Клітинка з передумовами (код)" title="Пряме посилання на 2. Клітинка з передумовами (код)" translate="no">​</a></h3>
 <p>Після повідомлення вставляється клітинка коду, яка:</p>
 <ul>
-<li class=""><strong>Встановлює необхідні пакети</strong> (<code>qiskit</code>, <code>qiskit-aer</code>, <code>qiskit-ibm-runtime</code>,
+<li class="">
+<p><strong>Встановлює необхідні пакети</strong> (<code>qiskit</code>, <code>qiskit-aer</code>, <code>qiskit-ibm-runtime</code>,
 <code>pylatexenc</code>, а також будь-які специфічні для підручника пакети, виявлені через
 сканування імпортів). Встановлення <strong>пропускається</strong>, якщо пакети вже присутні
-(наприклад, у Binder або Code Engine, де вони попередньо встановлені).</li>
-<li class=""><strong>Надає шаблон облікових даних із коментарями</strong> для IBM Quantum, щоб користувачі,
-які хочуть запустити на реальному обладнанні, могли розкоментувати та заповнити свій API-ключ.</li>
+(наприклад, у Binder або Code Engine, де вони попередньо встановлені).</p>
+</li>
+<li class="">
+<p><strong>Надає шаблон облікових даних із коментарями</strong> для IBM Quantum, щоб користувачі,
+які хочуть запустити на реальному обладнанні, могли розкоментувати та заповнити свій API-ключ.</p>
+</li>
 </ul>
 <p>У Google Colab ця клітинка автоматично виконується при відкритті ноутбука завдяки
 мета-прапорцю <code>cell_execution_strategy: setup</code>.</p>
@@ -53,26 +57,42 @@ Engine</strong>, ти отримуєш копію оригінального н�
 <p>Підручники, які відображаються на цьому сайті, конвертуються з вихідних <code>.ipynb</code>-ноутбуків
 або <code>.mdx</code>-файлів. Застосовуються такі перетворення:</p>
 <ul>
-<li class=""><strong>Рядки <code>pip install</code></strong> додаються до блоків коду Python, які імпортують
-сторонні пакети, що дозволяє виконання в один клік через thebelab.</li>
-<li class=""><strong>Розділ опитування підручника IBM</strong>: Додається примітка, яка уточнює, що опитування
+<li class="">
+<p><strong>Рядки <code>pip install</code></strong> додаються до блоків коду Python, які імпортують
+сторонні пакети, що дозволяє виконання в один клік через thebelab.</p>
+</li>
+<li class="">
+<p><strong>Розділ опитування підручника IBM</strong>: Додається примітка, яка уточнює, що опитування
 належить IBM Quantum та містить посилання на Issues GitHub сайту doQumentation для
-зворотного зв&#x27;язку щодо сайту.</li>
-<li class=""><strong>Віджет зворотного зв&#x27;язку</strong>: Внизу кожного підручника додається віджет «Чи було це корисно?»,
-відстежуваний через Umami — аналітику, що поважає конфіденційність.</li>
-<li class=""><strong>Виправлення синтаксису MDX</strong>: Фігурні дужки, ієрархія заголовків та проблеми сумісності JSX
-автоматично виправляються для рендерингу в Docusaurus.</li>
-<li class=""><strong>OpenInLabBanner</strong>: Нижче заголовка вставляється інтерактивний банер із
-кнопками для відкриття ноутбука у Colab, Binder або Code Engine.</li>
+зворотного зв&#x27;язку щодо сайту.</p>
+</li>
+<li class="">
+<p><strong>Віджет зворотного зв&#x27;язку</strong>: Внизу кожного підручника додається віджет «Чи було це корисно?»,
+відстежуваний через Umami — аналітику, що поважає конфіденційність.</p>
+</li>
+<li class="">
+<p><strong>Виправлення синтаксису MDX</strong>: Фігурні дужки, ієрархія заголовків та проблеми сумісності JSX
+автоматично виправляються для рендерингу в Docusaurus.</p>
+</li>
+<li class="">
+<p><strong>OpenInLabBanner</strong>: Нижче заголовка вставляється інтерактивний банер із
+кнопками для відкриття ноутбука у Colab, Binder або Code Engine.</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-not-modified">Що НЕ змінюється<a href="#what-is-not-modified" class="hash-link" aria-label="Пряме посилання на Що НЕ змінюється" title="Пряме посилання на Що НЕ змінюється" translate="no">​</a></h2>
 <ul>
-<li class=""><strong>Сам вміст підручника</strong> (пояснення, логіка коду, результати) ніколи
-не змінюється.</li>
-<li class=""><strong>Атрибуція оригінальних авторів</strong> зберігається через frontmatter та файл NOTICE
-(ліцензії Apache 2.0 / CC BY-SA 4.0).</li>
-<li class=""><strong>Жодного коду телеметрії чи відстеження</strong> не вставляється в ноутбуки. Аналітика
-(Umami) працює лише на сайті doQumentation, а не в експортованих ноутбуках.</li>
+<li class="">
+<p><strong>Сам вміст підручника</strong> (пояснення, логіка коду, результати) ніколи
+не змінюється.</p>
+</li>
+<li class="">
+<p><strong>Атрибуція оригінальних авторів</strong> зберігається через frontmatter та файл NOTICE
+(ліцензії Apache 2.0 / CC BY-SA 4.0).</p>
+</li>
+<li class="">
+<p><strong>Жодного коду телеметрії чи відстеження</strong> не вставляється в ноутбуки. Аналітика
+(Umami) працює лише на сайті doQumentation, а не в експортованих ноутбуках.</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="source-code">Вихідний код<a href="#source-code" class="hash-link" aria-label="Пряме посилання на Вихідний код" title="Пряме посилання на Вихідний код" translate="no">​</a></h2>
 <p>Усі перетворення реалізовані у

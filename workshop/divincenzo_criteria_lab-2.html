@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.3b1616bd.js" defer="defer"></script>
-<script src="/assets/js/main.bb19ed13.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5042857f.js" defer="defer"></script>
+<script src="/assets/js/main.7d794e09.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/workshop/divincenzo_criteria_lab-2" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,11 +28,21 @@
 <p>Фізик Девід ДіВінченцо сформулював п&#x27;ять ключових вимог до будь-якої фізичної реалізації квантового комп&#x27;ютера, а також два додаткові критерії для квантового зв&#x27;язку. У цьому ноутбуці ми <strong>відчуємо кожен критерій ДіВінченцо через практичні демонстрації у Qiskit</strong>. Замість глибокого занурення в теорію кожен розділ коротко пояснює один критерій, а потім пропонує задачі з кодом, що використовують Qiskit 2. Ти зможеш запускати Circuit на симуляторах і реальних пристроях IBM Quantum, щоб <strong>досліджувати кожен принцип на практиці</strong>.</p>
 <p><strong>П&#x27;ять критеріїв ДіВінченцо для квантових обчислень</strong>:</p>
 <ol>
-<li class=""><strong>Масштабована фізична система з добре охарактеризованими qubit.</strong></li>
-<li class=""><strong>Можливість ініціалізувати qubit</strong> у простий еталонний стан (наприклад, |00…0〉).</li>
-<li class=""><strong>Тривалий час декогеренції</strong> (час когерентності qubit значно більший за час операції Gate).</li>
-<li class=""><strong>Універсальний набір квантових Gate</strong> (здатний виконувати довільні унітарні операції).</li>
-<li class=""><strong>Можливість вимірювання окремого qubit</strong> (зчитувати стан кожного qubit).</li>
+<li class="">
+<p><strong>Масштабована фізична система з добре охарактеризованими qubit.</strong></p>
+</li>
+<li class="">
+<p><strong>Можливість ініціалізувати qubit</strong> у простий еталонний стан (наприклад, |00…0〉).</p>
+</li>
+<li class="">
+<p><strong>Тривалий час декогеренції</strong> (час когерентності qubit значно більший за час операції Gate).</p>
+</li>
+<li class="">
+<p><strong>Універсальний набір квантових Gate</strong> (здатний виконувати довільні унітарні операції).</p>
+</li>
+<li class="">
+<p><strong>Можливість вимірювання окремого qubit</strong> (зчитувати стан кожного qubit).</p>
+</li>
 </ol>
 <p><em>(ДіВінченцо також описав два критерії для квантового зв&#x27;язку: здатність взаємно перетворювати стаціонарні та «летючі» qubit, і надійно передавати летючі qubit між локаціями. Ми включаємо їх до рекомендованого завдання наприкінці цього ноутбука.)</em></p>
 <p>Кожен із наступних розділів відповідає одному критерію. Ми використаємо Qiskit, щоб проілюструвати концепцію з кодом та <strong>інтерактивними експериментами</strong>, які ти можеш спробувати. Наприклад, ми побачимо, як збільшення кількості qubit і глибини Circuit впливає на результати (Критерій 1), як скидати та підготовлювати стани qubit (Критерій 2), як вимірювати qubit на симуляторах та реальних пристроях (Критерій 4), як Qiskit складає універсальні Gate (Критерій 3), і як скінченна когерентність (T₁, T₂) впливає на обчислення (Критерій 5). Наприкінці ти матимеш глибшу інтуїцію щодо того, що означає кожен критерій ДіВінченцо на практиці і як Qiskit дозволяє з ними експериментувати.</p>
@@ -149,8 +159,12 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-communication-criteria-flying-qubits">Критерії квантового зв&#x27;язку (qubit-и, що «летять»)<a href="#quantum-communication-criteria-flying-qubits" class="hash-link" aria-label="Пряме посилання на Критерії квантового зв&#x27;язку (qubit-и, що «летять»)" title="Пряме посилання на Критерії квантового зв&#x27;язку (qubit-и, що «летять»)" translate="no">​</a></h2>
 <p>ДіВінченцо також виклав два критерії, специфічні для квантового зв&#x27;язку, важливі при побудові мережевого квантового комп&#x27;ютера:</p>
 <ol start="6">
-<li class=""><strong>Можливість взаємного перетворення стаціонарних та «літаючих» qubit-ів.</strong> (Наприклад, відображення qubit-а в процесорі на фотон, що може переміщатися.)</li>
-<li class=""><strong>Можливість надійної передачі «літаючих» qubit-ів між місцями.</strong> (Наприклад, передача фотонного qubit-а через волокно без втрати квантової інформації.)</li>
+<li class="">
+<p><strong>Можливість взаємного перетворення стаціонарних та «літаючих» qubit-ів.</strong> (Наприклад, відображення qubit-а в процесорі на фотон, що може переміщатися.)</p>
+</li>
+<li class="">
+<p><strong>Можливість надійної передачі «літаючих» qubit-ів між місцями.</strong> (Наприклад, передача фотонного qubit-а через волокно без втрати квантової інформації.)</p>
+</li>
 </ol>
 <p>Це виходить за межі стандартного використання Qiskit, оскільки Qiskit переважно працює зі стаціонарними qubit-ами на чипі. Однак ми можемо проілюструвати <em>концепцію</em> цих критеріїв на простому прикладі: <strong>квантова телепортація</strong>. Телепортація показує перетворення стану стаціонарного qubit-а на інформацію, що переноситься заплутаною парою («літаюча» частина) та класичним зв&#x27;язком, яка потім використовується для відтворення стану на іншому стаціонарному qubit-і в іншому місці.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module">Рекомендована активність: пройди модуль <em>Quantum Teleportation</em> від Qiskit in Classrooms<a href="#recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" class="hash-link" aria-label="Пряме посилання на recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" title="Пряме посилання на recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" translate="no">​</a></h3>
@@ -160,11 +174,21 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-summary">Висновок та підсумок<a href="#conclusion-summary" class="hash-link" aria-label="Пряме посилання на Висновок та підсумок" title="Пряме посилання на Висновок та підсумок" translate="no">​</a></h2>
 <p>Ми розробили серію вправ, орієнтованих на код, для ілюстрації критеріїв ДіВінченцо за допомогою Qiskit. Через ці практичні приклади ти дослідив, як реальна платформа квантових обчислень відповідає кожній вимозі:</p>
 <ul>
-<li class=""><strong>Масштабованість</strong>: побудова Circuit-ів на більшій кількості qubit-ів та розуміння масштабування шуму.</li>
-<li class=""><strong>Ініціалізація</strong>: використання скидань та підготовки стану для надійного запуску обчислень у відомих станах.</li>
-<li class=""><strong>Універсальні Gate-и</strong>: транспіляція складних операцій у базисні Gate-и машини, що доводить можливість виконання будь-яких обчислень.</li>
-<li class=""><strong>Вимірювання</strong>: зчитування qubit-ів та робота з реалістичними помилками зчитування.</li>
-<li class=""><strong>Когерентність</strong>: спостереження впливу кінцевих T₁, T₂ на точність алгоритмів та необхідність того, щоб операції виконувались швидко відносно декогеренції.</li>
+<li class="">
+<p><strong>Масштабованість</strong>: побудова Circuit-ів на більшій кількості qubit-ів та розуміння масштабування шуму.</p>
+</li>
+<li class="">
+<p><strong>Ініціалізація</strong>: використання скидань та підготовки стану для надійного запуску обчислень у відомих станах.</p>
+</li>
+<li class="">
+<p><strong>Універсальні Gate-и</strong>: транспіляція складних операцій у базисні Gate-и машини, що доводить можливість виконання будь-яких обчислень.</p>
+</li>
+<li class="">
+<p><strong>Вимірювання</strong>: зчитування qubit-ів та робота з реалістичними помилками зчитування.</p>
+</li>
+<li class="">
+<p><strong>Когерентність</strong>: спостереження впливу кінцевих T₁, T₂ на точність алгоритмів та необхідність того, щоб операції виконувались швидко відносно декогеренції.</p>
+</li>
 </ul>
 <p>Для повноти ми також торкнулись аспектів квантового зв&#x27;язку через модуль Qiskit in Classrooms <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a>, пов&#x27;язуючи останні два критерії (qubit-и, що «летять»).</p>
 <p>Насамкінець варто зазначити, як ці критерії поєднуються в реальному квантовому комп&#x27;ютері IBM. Пристрій на зразок <strong>ibmq_brisbane</strong> має 127 надпровідних qubit-ів (Критерій 1), кожен із яких починає в стані |0〉 (Критерій 2), із відкаліброваним набором Gate-ів та компіляторами для універсальності (Критерій 4), мікрохвильовими резонаторами зчитування для кожного qubit-а (Критерій 5) та часами когерентності порядку сотень мікросекунд проти наносекундних операцій (Критерій 3). Для експериментів із квантовими мережами IBM та інші досліджують перетворення мікрохвиль в оптичний діапазон для «літаючих» qubit-ів та заплутування віддалених qubit-ів (Критерії 6 і 7); це активні напрямки досліджень.</p>

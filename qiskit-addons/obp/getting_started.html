@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.3b1616bd.js" defer="defer"></script>
-<script src="/assets/js/main.bb19ed13.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5042857f.js" defer="defer"></script>
+<script src="/assets/js/main.7d794e09.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,27 +29,37 @@
 <p>Один зі способів дозволити глибше зворотне поширення у схему, водночас запобігаючи надмірному зростанню оператора, — це відкидати доданки з малими коефіцієнтами, замість того щоб додавати їх до оператора. Відкидання доданків може призвести до меншої кількості квантових схем для виконання, однак це спричиняє деяку похибку в кінцевому обчисленні значення очікування, пропорційну величині коефіцієнтів відкинутих доданків.
 У цьому посібнику ми реалізуємо <a href="https://quantum.cloud.ibm.com/docs/guides/serverless#qiskit-patterns-with-quantum-serverless" target="_blank" rel="noopener noreferrer" class="">шаблон Qiskit</a> для моделювання квантової динаміки ланцюжка спінів Гейзенберга за допомогою зворотного поширення операторів:</p>
 <ul>
-<li class=""><strong>Крок 1: Відображення на квантову задачу</strong>
+<li class="">
+<p><strong>Крок 1: Відображення на квантову задачу</strong></p>
 <ul>
 <li class="">Відображення Гамільтоніана, еволюційованого в часі, на квантову схему</li>
 </ul>
 </li>
-<li class=""><strong>Крок 2: Оптимізація задачі</strong>
+<li class="">
+<p><strong>Крок 2: Оптимізація задачі</strong></p>
 <ul>
-<li class="">Розбиття схеми на зрізи</li>
+<li class="">
+<p>Розбиття схеми на зрізи</p>
+</li>
 <li class="">
 <font color="#0F62FE">Зворотне поширення зрізів зі схеми на спостережуваний оператор Паулі</font>
 </li>
-<li class="">Об&#x27;єднання зрізів, що залишились, в єдину схему</li>
-<li class="">Транспіляція схеми для Backend</li>
+<li class="">
+<p>Об&#x27;єднання зрізів, що залишились, в єдину схему</p>
+</li>
+<li class="">
+<p>Транспіляція схеми для Backend</p>
+</li>
 </ul>
 </li>
-<li class=""><strong>Крок 3: Виконання експериментів</strong>
+<li class="">
+<p><strong>Крок 3: Виконання експериментів</strong></p>
 <ul>
 <li class="">Обчислення значення очікування за допомогою зменшеної схеми та розширеного спостережуваного оператора за допомогою <a href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator" target="_blank" rel="noopener noreferrer" class="">StatevectorEstimator</a> для простоти в цьому блокноті</li>
 </ul>
 </li>
-<li class=""><strong>Крок 4: Відновлення результатів</strong>
+<li class="">
+<p><strong>Крок 4: Відновлення результатів</strong></p>
 <ul>
 <li class="">Н/Д</li>
 </ul>
@@ -124,6 +134,7 @@ circuit.draw(&quot;mpl&quot;, style=&quot;iqp&quot;, scale=0.6)
 ![Quantum circuit diagram](/img/qiskit-addons/obp/01-getting-started/output_2.png)
 
 ## Крок 2: Оптимізація задачі \{#step-2-optimize-the-problem}
+
 ### Створення зрізів схеми для зворотного поширення \{#create-circuit-slices-to-backpropagate}
 
 Пам&#x27;ятай, що функція ``backpropagate`` виконуватиме зворотне поширення цілих зрізів схеми за раз, тому вибір способу розбиття може вплинути на ефективність зворотного поширення для конкретної задачі. Тут ми згрупуємо Gate одного типу у зрізи за допомогою функції [slice_by_gate_types](https://qiskit.github.io/qiskit-addon-utils/stubs/qiskit_addon_utils.slicing.slice_by_gate_types.html).
@@ -266,13 +277,14 @@ bp_obs_trunc_isa = bp_obs_trunc.apply_layout(bp_circuit_trunc_isa.layout)
 ```
 
 ## Крок 3: Виконання квантових експериментів \{#step-3-execute-quantum-experiments}
+
 ### Обчислення значення очікування \{#calculate-expectation-value}
 
 Нарешті, ми можемо запустити експерименти зі зворотним поширенням і порівняти їх із повним експериментом за допомогою безшумного [StatevectorEstimator](https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator). Можна побачити, що значення очікування після зворотного поширення без відкидання еквівалентне точному значенню в межах числової точності.
 
 Значення очікування на операторі з відкинутими доданками має деяку похибку порядку ``1e-4``, що знаходиться в межах очікуваного допуску.
 
-**Примітка:** Ми використовуємо примітив Estimator на основі вектора стану, щоб проілюструвати вплив відкидання на вихідні дані. Для запуску на Backend, для якого були транспільовані експерименти на Кроці 2, слід імпортувати [EstimatorV2](https://quantum.cloud.ibm.com/docs/api/qiskit-ibm-runtime/estimator-v2) з ``qiskit-ibm-runtime`` і передати екземпляр Backend до конструктора.
+**Примітка:** Ми використовуємо примітив ``Estimator`` на основі вектора стану, щоб проілюструвати ефект усічення на вихідний результат. Щоб запустити на Backend, до якого були транспільовані експерименти на Кроці 2, потрібно імпортувати [EstimatorV2](https://quantum.cloud.ibm.com/docs/api/qiskit-ibm-runtime/estimator-v2) з ``qiskit-ibm-runtime`` та передати екземпляр backend у конструктор.
 
 ```python
 from qiskit.primitives import StatevectorEstimator as Estimator
