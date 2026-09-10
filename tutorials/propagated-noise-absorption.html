@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.3837abea.js" defer="defer"></script>
-<script src="/assets/js/main.f6fd128e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0c91a2fe.js" defer="defer"></script>
+<script src="/assets/js/main.b62e16f5.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/propagated-noise-absorption" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/propagated-noise-absorption" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,28 +29,28 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">Результати навчання<a href="#learning-outcomes" class="hash-link" aria-label="Пряме посилання на Результати навчання" title="Пряме посилання на Результати навчання" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>What propagated noise absorption (PNA) is, and how it mitigates two-qubit gate noise by absorbing learned inverse noise channels into the measured observable</p>
+<p>Що таке поглинання поширеного шуму (PNA) і як воно пом&#x27;якшує шум двокубітних вентилів шляхом поглинання вивчених обернених каналів шуму у вимірювану спостережувану величину</p>
 </li>
 <li class="">
-<p>How to use <a class="" href="/guides/directed-execution-model#samplomatic"><code>samplomatic</code></a> to box and annotate circuit layers for twirling, basis changes, and noise injection</p>
+<p>Як використовувати <a class="" href="/guides/directed-execution-model#samplomatic"><code>samplomatic</code></a> для боксування та анотування шарів схеми для твірлінгу, змін базису та введення шуму</p>
 </li>
 <li class="">
-<p>How to learn layer noise with <code>[NoiseLearnerV3</code>](/guides/directed-execution-model#noiselearnerv3) and propagate it into a noise-mitigating observable with <a href="https://github.com/Qiskit/qiskit-addon-pna" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-addon-pna</code></a></p>
+<p>Як вивчати шум шарів за допомогою <code>[NoiseLearnerV3</code>](/guides/directed-execution-model#noiselearnerv3) і поширювати його у спостережуване, що пом&#x27;якшує шум, за допомогою <a href="https://github.com/Qiskit/qiskit-addon-pna" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-addon-pna</code></a></p>
 </li>
 <li class="">
-<p>How to sample randomized circuits with the <code>QuantumProgram</code> and <a class="" href="/guides/get-started-with-executor"><code>Executor</code></a> classes in <code>qiskit-ibm-runtime</code>, and combine PNA with TREX and post-selection</p>
+<p>Як вибирати рандомізовані схеми за допомогою класів <code>QuantumProgram</code> та <a class="" href="/guides/get-started-with-executor"><code>Executor</code></a> у <code>qiskit-ibm-runtime</code> і поєднувати PNA з TREX та пост-селекцією</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Передумови<a href="#prerequisites" class="hash-link" aria-label="Пряме посилання на Передумови" title="Пряме посилання на Передумови" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>The <a class="" href="/guides/intro-to-patterns">Qiskit patterns</a> workflow</p>
+<p>Робочий процес <a class="" href="/guides/intro-to-patterns">Патерни Qiskit</a></p>
 </li>
 <li class="">
-<p>Using the <a class="" href="/guides/get-started-with-estimator">Estimator</a> primitive to calculate expectation values of an observable</p>
+<p>Використання примітива <a class="" href="/guides/get-started-with-estimator">Estimator</a> для обчислення очікуваних значень спостережуваного</p>
 </li>
 <li class="">
-<p>Error mitigation techniques such as Pauli twirling and TREX, covered in <a class="" href="/tutorials/combine-error-mitigation-techniques">Combine error mitigation options with the Estimator primitive</a></p>
+<p>Техніки пом&#x27;якшення помилок, такі як твірлінг Паулі та TREX, розглянуті в <a class="" href="/tutorials/combine-error-mitigation-techniques">Поєднання опцій пом&#x27;якшення помилок з примітивом Estimator</a></p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Передумови<a href="#background" class="hash-link" aria-label="Пряме посилання на Передумови" title="Пряме посилання на Передумови" translate="no">​</a></h2>

@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.3837abea.js" defer="defer"></script>
-<script src="/assets/js/main.f6fd128e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0c91a2fe.js" defer="defer"></script>
+<script src="/assets/js/main.b62e16f5.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/edc-cut-bell-pair-benchmarking" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,25 +29,25 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">Результати навчання<a href="#learning-outcomes" class="hash-link" aria-label="Пряме посилання на Результати навчання" title="Пряме посилання на Результати навчання" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to build dynamic circuits with mid-circuit measurements and classical feedforward to teleport entanglement between distant qubits;</p>
+<p>Як будувати динамічні схеми з вимірюваннями в середині схеми та класичним зворотним зв&#x27;язком для телепортації заплутаності між віддаленими кубітами;</p>
 </li>
 <li class="">
-<p>How to compute and interpret the error metric to quantify Bell pair fidelity across a device;</p>
+<p>Як обчислювати та інтерпретувати метрику похибки для кількісної оцінки точності пари Белла на пристрої;</p>
 </li>
 <li class="">
-<p>How to identify which qubit pairs are best suited for LOCC-based operations using the benchmark results.</p>
+<p>Як визначати, які пари кубітів найкраще підходять для операцій на основі LOCC, використовуючи результати бенчмаркінгу.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Передумови<a href="#prerequisites" class="hash-link" aria-label="Пряме посилання на Передумови" title="Пряме посилання на Передумови" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/basics-of-quantum-information">Basic quantum computing concepts</a>, including Bell states, entanglement, and quantum gates;</p>
+<p><a class="" href="/learning/courses/basics-of-quantum-information">Базові концепції квантових обчислень</a>, включаючи стани Белла, заплутаність та квантові вентилі;</p>
 </li>
 <li class="">
-<p>Familiarity with <a class="" href="/guides/classical-feedforward-and-control-flow">dynamic circuits</a> (<a class="" href="/guides/execute-dynamic-circuits#mid-circuit-measurements">mid-circuit measurements</a> and classical feedforward);</p>
+<p>Знайомство з <a class="" href="/guides/classical-feedforward-and-control-flow">динамічними схемами</a> (<a class="" href="/guides/execute-dynamic-circuits#mid-circuit-measurements">вимірюваннями в середині схеми</a> та класичним зворотним зв&#x27;язком);</p>
 </li>
 <li class="">
-<p>Basic knowledge of <a href="https://docs.quantum.ibm.com/guides" target="_blank" rel="noopener noreferrer" class="">Qiskit SDK</a> and <a class="" href="/guides/compute-services#qiskit-runtime">IBM Quantum® Compute Service</a>, and access to an <a class="" href="/guides/cloud-setup">IBM Quantum account</a>.</p>
+<p>Базові знання <a href="https://docs.quantum.ibm.com/guides" target="_blank" rel="noopener noreferrer" class="">Qiskit SDK</a> та <a class="" href="/guides/compute-services#qiskit-runtime">IBM Quantum® Compute Service</a>, а також доступ до <a class="" href="/guides/cloud-setup">облікового запису IBM Quantum</a>.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Передісторія<a href="#background" class="hash-link" aria-label="Пряме посилання на Передісторія" title="Пряме посилання на Передісторія" translate="no">​</a></h2>
