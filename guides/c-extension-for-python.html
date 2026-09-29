@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.aa571fe0.js" defer="defer"></script>
-<script src="/assets/js/main.6de7706a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2b720061.js" defer="defer"></script>
+<script src="/assets/js/main.8dc127d4.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/c-extension-for-python" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -38,7 +38,7 @@
 <li class="">
 <p><a href="https://numpy.org/doc/stable/user/c-info.how-to-extend.html" target="_blank" rel="noopener noreferrer" class="">Документація NumPy щодо використання його C API</a>.</p>
 </li>
-</ul><p>Qiskit C API надається для Python-модулів розширень дуже схожим чином до NumPy C API. Якщо ти раніше
+</ul><p>Qiskit C API надається для Python-модулів розширень майже так само, як NumPy C API. Якщо ти раніше
 програмував NumPy-розширення, процес Qiskit видасться тобі знайомим.</p></div></div>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>попередження</div><div class="admonitionContent_BuS1"><p>Qiskit C API досі є експериментальним. Тому стабільний програмний або бінарний інтерфейс ще не зафіксовано,
 і між мінорними версіями можуть бути несумісні зміни.</p><p>Наприклад, модуль розширення, що використовує Qiskit v2.4.0 під час збірки, гарантовано працюватиме
@@ -131,7 +131,7 @@
 <p><strong><code>src/spectator_measures/_coremodule.c</code></strong></p>
 <div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token macro property directive-hash" style="color:#36acaa">#</span><span class="token macro property directive keyword" style="color:#00009f">define</span><span class="token macro property" style="color:#36acaa"> </span><span class="token macro property macro-name" style="color:#36acaa">QISKIT_PYTHON_EXTENSION</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token macro property directive-hash" style="color:#36acaa">#</span><span class="token macro property directive keyword" style="color:#00009f">include</span><span class="token macro property" style="color:#36acaa"> </span><span class="token macro property string" style="color:#e3116c">&lt;Python.h&gt;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token macro property directive-hash" style="color:#36acaa">#</span><span class="token macro property directive keyword" style="color:#00009f">include</span><span class="token macro property" style="color:#36acaa"> </span><span class="token macro property string" style="color:#e3116c">&lt;qiskit.h&gt;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token macro property directive-hash" style="color:#36acaa">#</span><span class="token macro property directive keyword" style="color:#00009f">include</span><span class="token macro property" style="color:#36acaa"> </span><span class="token macro property string" style="color:#e3116c">&lt;limits.h&gt;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token macro property directive-hash" style="color:#36acaa">#</span><span class="token macro property directive keyword" style="color:#00009f">include</span><span class="token macro property" style="color:#36acaa"> </span><span class="token macro property string" style="color:#e3116c">&lt;stdbool.h&gt;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token macro property directive-hash" style="color:#36acaa">#</span><span class="token macro property directive keyword" style="color:#00009f">include</span><span class="token macro property" style="color:#36acaa"> </span><span class="token macro property string" style="color:#e3116c">&lt;stdlib.h&gt;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token macro property directive-hash" style="color:#36acaa">#</span><span class="token macro property directive keyword" style="color:#00009f">include</span><span class="token macro property" style="color:#36acaa"> </span><span class="token macro property string" style="color:#e3116c">&lt;string.h&gt;</span><br></div></code></pre></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="write-the-pure-c-api-code">Написання чистого коду C API<a href="#write-the-pure-c-api-code" class="hash-link" aria-label="Пряме посилання на Написання чистого коду C API" title="Пряме посилання на Написання чистого коду C API" translate="no">​</a></h3>
-<p>Далі написуй всю бізнес-логіку як чистий код Qiskit C API. Ми надамо
+<p>Далі напиши всю бізнес-логіку як чистий код Qiskit C API. Ми надамо
 доступ до цієї логіки в Python-просторі в наступному розділі.</p>
 <p>Цей розділ містить лише чистий код Qiskit C API. Він використовує типи C API:</p>
 <ul>
@@ -150,8 +150,8 @@
 </ul>
 <p>Перші два є частиною нашої взаємодії з Python-простором, але при роботі з ними нам потрібно
 розглядати лише чистий C API. У цьому коді немає взаємодії з інтерпретатором Python.</p>
-<p>Зверни увагу, що всі функції та символи, визначені в цьому розділі, оголошені з рівнем видимості
-<code>static</code>. Це тому, що інтерпретатор Python не буде лінкуватися проти цього модуля розширення;
+<p>Зверни увагу, що всі функції та символи, визначені в цьому розділі, оголошені зі статичним зв&#x27;язуванням
+(<code>static</code>). Це тому, що інтерпретатор Python не компонуватиметься з цим модулем розширення;
 ми надамо інтерпретатору деталі доступних функцій у наступному розділі.</p>
 <p>Ми не будемо зупинятися на алгоритмічних деталях цього коду; корисно використовувати змістовний
 прохід транспілера для демонстрації, але точна реалізація алгоритму не важлива для цього посібника.</p>
@@ -160,7 +160,7 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="write-the-python-interaction-code">Написання коду взаємодії з Python<a href="#write-the-python-interaction-code" class="hash-link" aria-label="Пряме посилання на Написання коду взаємодії з Python" title="Пряме посилання на Написання коду взаємодії з Python" translate="no">​</a></h3>
 <p>Вся бізнес-логіка тепер визначена в чистому C. Далі її потрібно безпечно надати Python.</p>
 <p>Для початку визнач єдину функцію, яка буде надана Python. Вона повинна
-дотримуватися визначеного підпису, що є виключно в термінах типів Python і виглядає як
+мати визначену сигнатуру, що є виключно в термінах типів Python і виглядає як
 метод <code>fn(self, *args, **kwargs)</code>. Ми маємо повертати <code>PyObject *</code> — це узагальнена форма
 будь-якого Python-об&#x27;єкта.</p>
 <p>Повна функція виглядає так:</p>
@@ -169,7 +169,7 @@
 <p>Коротко: функція:</p>
 <ol>
 <li class="">
-<p>Дотримується визначеного підпису для прийому довільних Python-аргументів.</p>
+<p>Має визначену сигнатуру для прийому довільних Python-аргументів.</p>
 </li>
 <li class="">
 <p>Визначає простір для зберігання нативних C-об&#x27;єктів, витягнутих з Python-аргументів.</p>
