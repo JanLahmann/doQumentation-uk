@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.d820e9af.js" defer="defer"></script>
-<script src="/assets/js/main.134a9c9a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.65ddf5db.js" defer="defer"></script>
+<script src="/assets/js/main.f5b7cba6.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -31,7 +31,7 @@
 <li class="">
 <p><strong>Крок 1: Відображення на квантову задачу</strong></p>
 <ul>
-<li class="">Відображення Гамільтоніана, еволюційованого в часі, на квантову схему</li>
+<li class="">Відображення часової еволюції гамільтоніана на квантову схему</li>
 </ul>
 </li>
 <li class="">
@@ -155,7 +155,7 @@ Separated the circuit into 18 slices.
 
 Під час зворотного поширення кількість доданків в операторі, як правило, швидко наближається до $4^N$, де $N$ — кількість qubit. Розмір оператора можна обмежити, задавши аргумент ``operator_budget`` функції ``backpropagate``, який приймає екземпляр [OperatorBudget](https://qiskit.github.io/qiskit-addon-obp/stubs/qiskit_addon_obp.utils.simplify.OperatorBudget.html).
 
-Тут ми вказуємо, що зворотне поширення має зупинитися, коли кількість поквантово комутуючих груп Паулі в операторі перевищить 8.
+Тут ми вказуємо, що зворотне поширення має зупинитися, коли кількість покубітно комутуючих груп Паулі в операторі перевищить 8.
 
 ```python
 from qiskit_addon_obp.utils.simplify import OperatorBudget
@@ -165,9 +165,9 @@ op_budget = OperatorBudget(max_qwc_groups=8)
 
 ### Зворотне поширення зрізів зі схеми \{#backpropagate-slices-from-the-circuit}
 
-Спочатку ми задамо спостережуваний оператор Паулі-Z на qubit 0 і виконаємо зворотне поширення зрізів зі схеми часової еволюції доти, доки доданки спостережуваного оператора більше не вдаватиметься об&#x27;єднати у 8 або менше поквантово комутуючих груп Паулі.
+Спочатку ми задамо спостережуваний оператор Паулі-Z на qubit 0 і виконаємо зворотне поширення зрізів зі схеми часової еволюції доти, доки доданки спостережуваного оператора більше не вдаватиметься об&#x27;єднати у 8 або менше покубітно комутуючих груп Паулі.
 
-Нижче ти побачиш, що ми виконали зворотне поширення 7 зрізів, але використали лише 6 із 8 відведених груп Паулі. Це означає, що зворотне поширення ще одного зрізу призведе до перевищення кількості груп Паулі понад 8. Ми можемо перевірити це, перевіривши повернуті метадані.
+Нижче ти побачиш, що ми виконали зворотне поширення 7 зрізів, але використали лише 6 із 8 відведених груп Паулі. Це означає, що зворотне поширення ще одного зрізу призведе до того, що кількість груп Паулі перевищить 8. Переконатися в цьому можна, переглянувши повернуті метадані.
 
 ```python
 from qiskit.quantum_info import SparsePauliOp
@@ -283,7 +283,7 @@ bp_obs_trunc_isa = bp_obs_trunc.apply_layout(bp_circuit_trunc_isa.layout)
 
 Значення очікування на операторі з відкинутими доданками має деяку похибку порядку ``1e-4``, що знаходиться в межах очікуваного допуску.
 
-**Примітка:** Ми використовуємо примітив ``Estimator`` на основі вектора стану, щоб проілюструвати ефект усічення на вихідний результат. Щоб запустити на Backend, до якого були транспільовані експерименти на Кроці 2, потрібно імпортувати [EstimatorV2](https://quantum.cloud.ibm.com/docs/api/qiskit-ibm-runtime/estimator-v2) з ``qiskit-ibm-runtime`` та передати екземпляр backend у конструктор.
+**Примітка:** Ми використовуємо примітив ``Estimator`` на основі вектора стану, щоб проілюструвати вплив відкидання доданків на результат. Щоб запустити на Backend, до якого були транспільовані експерименти на Кроці 2, потрібно імпортувати [EstimatorV2](https://quantum.cloud.ibm.com/docs/api/qiskit-ibm-runtime/estimator-v2) з ``qiskit-ibm-runtime`` та передати екземпляр backend у конструктор.
 
 ```python
 from qiskit.primitives import StatevectorEstimator as Estimator
