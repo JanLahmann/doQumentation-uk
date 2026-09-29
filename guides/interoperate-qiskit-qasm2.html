@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.65ddf5db.js" defer="defer"></script>
-<script src="/assets/js/main.973207f7.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.283575c0.js" defer="defer"></script>
+<script src="/assets/js/main.a387fca2.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/interoperate-qiskit-qasm2" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/interoperate-qiskit-qasm2" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -56,7 +56,7 @@ Qiskit використовуватиме вбудовані вентилі з <
 Це означає, що стандартні налаштування імпортера можуть не розпізнати програму, експортовану нашим експортером.
 Щоб розв&#x27;язати цю проблему, дивись <a href="#qasm2-import-legacy" class="">конкретний приклад роботи з legacy-експортером</a>.</p><p>Ця розбіжність є спадковою поведінкою Qiskit, і <a href="https://github.com/Qiskit/qiskit/issues/10737" target="_blank" rel="noopener noreferrer" class="">вона буде усунена в одному з наступних релізів Qiskit</a>.</p></div></div>
 <p>Щоб передати інформацію про власну інструкцію імпортеру OpenQASM 2, використовуй <a class="" href="/api/qiskit/qasm2#qiskit.qasm2.CustomInstruction">клас <code>qasm2.CustomInstruction</code></a>.
-Він потребує чотирьох обов&#x27;язкових частин інформації, у такому порядку:</p>
+Він має чотири обов&#x27;язкові параметри, у такому порядку:</p>
 <ul>
 <li class="">
 <p><strong>Ім&#x27;я</strong> вентиля, що використовується в програмі OpenQASM 2</p>
@@ -73,7 +73,7 @@ Qiskit використовуватиме вбудовані вентилі з <
 </ul>
 <p>Якщо імпортер зустрічає визначення <code>gate</code>, що відповідає заданій власній інструкції, він використовує цю інформацію для відтворення об&#x27;єкта вентиля.
 Якщо зустрічається оператор <code>gate</code>, що збігається за <code>name</code> із власною інструкцією, але не збігається за кількістю параметрів або кубітів, імпортер викине <a class="" href="/api/qiskit/qasm2#qasm2parseerror"><code>QASM2ParseError</code></a>, сигналізуючи про невідповідність між наданою інформацією та програмою.</p>
-<p>Крім того, п&#x27;ятий аргумент <code>builtin</code> може бути необов&#x27;язково встановлено в <code>True</code>, щоб вентиль автоматично був доступний у програмі OpenQASM 2 навіть без явного визначення.
+<p>Крім того, можна задати необов&#x27;язковий п&#x27;ятий аргумент <code>builtin</code> зі значенням <code>True</code>, щоб вентиль автоматично був доступний у програмі OpenQASM 2 навіть без явного визначення.
 Якщо імпортер усе ж зустріне явне визначення <code>gate</code> для вбудованої власної інструкції — він мовчки його прийме.
 Як і раніше, якщо явне визначення з тим самим іменем несумісне з наданою власною інструкцією, буде викинуто <a class="" href="/api/qiskit/qasm2#qasm2parseerror"><code>QASM2ParseError</code></a>.
 Це корисно для сумісності зі старішими експортерами OpenQASM 2 та з деякими іншими квантовими платформами, які вважають «базові вентилі» свого апаратного забезпечення вбудованими інструкціями.</p>

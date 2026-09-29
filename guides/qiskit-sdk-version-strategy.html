@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.65ddf5db.js" defer="defer"></script>
-<script src="/assets/js/main.973207f7.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.283575c0.js" defer="defer"></script>
+<script src="/assets/js/main.a387fca2.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -43,19 +43,19 @@
 <p>З виходом нової мажорної версії попередня мажорна версія підтримується
 щонайменше шість місяців лише з виправленнями помилок, і один рік — з виправленнями безпеки. Протягом
 цього часу для цієї мажорної версії публікуються лише патч-випуски.
-Фінальний патч-випуск публікується після закінчення підтримки, і цей випуск
+Фінальний патч-випуск публікується в момент припинення підтримки, і цей випуск
 також документує завершення підтримки цієї серії мажорної версії. Тривале
 вікно підтримки попередньої мажорної версії необхідне для того, щоб надати
 споживачам Qiskit та їхнім користувачам час для міграції коду.
-Бібліотеки-залежності, що
-використовують Qiskit, не повинні підвищувати мінімальну необхідну версію Qiskit до нової
+Сторонні бібліотеки, що
+залежать від Qiskit, не повинні підвищувати мінімальну необхідну версію Qiskit до нової
 мажорної версії одразу після її виходу, оскільки базі користувачів бібліотеки потрібен час
 для переходу до нових змін API. Наявність розширеного вікна підтримки
-попередньої мажорної версії Qiskit дає проєктам-залежностям час для забезпечення
+попередньої мажорної версії Qiskit дає залежним проєктам час для забезпечення
 сумісності з наступною мажорною версією. Залежні проєкти можуть підтримувати
 дві серії випусків одночасно, щоб надати своїм користувачам шлях міграції.</p>
-<p>Для цілей семантичного версіонування публічний API Qiskit вважається
-будь-яким задокументованим модулем, класом, функцією або методом, що не позначений як приватний
+<p>Для цілей семантичного версіонування публічним API Qiskit вважається
+будь-який задокументований модуль, клас, функція або метод, що не позначений як приватний
 (з префіксом підкреслення <code>_</code>). Однак можуть бути явні винятки для
 конкретних задокументованих API. У таких випадках ці API будуть чітко задокументовані
 як ті, що ще не вважаються стабільними інтерфейсами, і при будь-якому використанні цих нестабільних інтерфейсів буде активно видаватись попередження, видиме користувачу. Крім того, в деяких
@@ -112,7 +112,7 @@ Qiskit перед переходом до потенційно зламного 
 сумісні з <a href="https://peps.python.org/pep-0440/" target="_blank" rel="noopener noreferrer" class="">PEP440</a>. Зазвичай
 це кандидати на випуск у формі <code>X.Y.0rc1</code>. Випуски <code>rc</code>
 матимуть фіналізовану поверхню API і використовуються для тестування майбутнього випуску.</p>
-<p>Зверни увагу, що коли публікуються один із суфіксів попереднього випуску PEP440 (наприклад, <code>a</code>, <code>b</code> або <code>pre</code>),
+<p>Зверни увагу, що коли публікується випуск з одним із суфіксів попереднього випуску PEP440 (наприклад, <code>a</code>, <code>b</code> або <code>pre</code>),
 він не має тих самих гарантій, що й випуск <code>rc</code>, і є
 лише попереднім переглядом. API може змінюватися між цими попередніми випусками
 та фінальним випуском з цим номером версії. Наприклад, <code>X.0.0pre1</code> може мати
