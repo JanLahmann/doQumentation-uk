@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.c8202204.js" defer="defer"></script>
-<script src="/assets/js/main.92a663b8.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.aa571fe0.js" defer="defer"></script>
+<script src="/assets/js/main.a1eb9be2.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/changelog-quantum-compute" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/changelog-quantum-compute" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,7 +28,7 @@
 <span id="executor-primitive"></span>
 <ul>
 <li class="">
-<p><strong>Представляємо примітив Executor</strong>: Ми раді оголосити про випуск нового примітиву <code>Executor</code> та нової версії допоміжного класу для навчання шуму, <code>NoiseLearnerV3</code>, обидва з яких вперше були представлені на QDC 2025.</p>
+<p><strong>Представляємо примітив Executor</strong>: Ми раді оголосити про випуск нового примітиву <code>Executor</code> та нової версії допоміжного класу для навчання шуму, <code>NoiseLearnerV3</code> — обидва вперше представлено на QDC 2025.</p>
 <p>Разом із <a href="https://qiskit.github.io/samplomatic/index.html" target="_blank" rel="noopener noreferrer" class="">Samplomatic</a>, вони складають <a class="" href="/guides/directed-execution-model">модель спрямованого виконання</a>, яка забезпечує повну прозорість і контроль для точного налаштування твого робочого процесу пом&#x27;якшення похибок. Посібник <a href="https://qiskit.github.io/qiskit-addon-slc/tutorials/01_getting_started.html" target="_blank" rel="noopener noreferrer" class="">Ймовірнісне скасування похибок за допомогою затінених світлових конусів</a>, наприклад, демонструє, як ця модель використовується для поєднання передових методів, включаючи затінені світлові конуси, ймовірнісне скасування похибок (PEC), Twirled Readout Error eXtinction (TREX) та <a class="" href="/guides/post-selection">постселекцію на основі вимірювання</a>, для подальшого покращення якості результату.</p>
 <p>Якщо ти віддаєш перевагу вищому рівню абстракції, <a class="" href="/guides/estimator-noise-management"><code>EstimatorV2</code></a> у Qiskit Runtime продовжує надавати кілька вбудованих методів пом&#x27;якшення та придушення похибок, які ти можеш легко налаштувати за допомогою опції <a class="" href="/guides/estimator-noise-management#resilience-level"><code>resilience_level</code></a>.</p>
 <p>Щоб дізнатися більше, дивись такі посібники:</p>
@@ -40,12 +40,12 @@
 <p><a class="" href="/guides/noise-learning">Помічник навчання шуму</a></p>
 </li>
 </ul>
-<p>Обидві ці нові функції наразі перебувають у стані бета-версії та вимагають <code>qiskit-ibm-runtime</code> версії 0.47.0 або новішої.</p>
+<p>Обидві ці нові функції наразі доступні в бета-версії та вимагають <code>qiskit-ibm-runtime</code> версії 0.47.0 або новішої.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="march-2026">Березень 2026<a href="#march-2026" class="hash-link" aria-label="Пряме посилання на Березень 2026" title="Пряме посилання на Березень 2026" translate="no">​</a></h2>
 <ul>
-<li class=""><code>qiskit-ibm-runtime</code> v0.46.0 випущено. Перегляньте виправлення помилок та інші примітки з часів v0.45.0 у <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/release-notes#0460-2026-03-23" target="_blank" rel="noopener noreferrer" class="">примітках до випуску</a>.</li>
+<li class=""><code>qiskit-ibm-runtime</code> v0.46.0 випущено. Переглянь виправлення помилок та інші примітки, що з&#x27;явилися після v0.45.0, у <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/release-notes#0460-2026-03-23" target="_blank" rel="noopener noreferrer" class="">примітках до випуску</a>.</li>
 </ul>
 <!-- -->
 <!-- -->
