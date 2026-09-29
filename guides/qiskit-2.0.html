@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.2b720061.js" defer="defer"></script>
-<script src="/assets/js/main.6c53564f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.d820e9af.js" defer="defer"></script>
+<script src="/assets/js/main.606d8530.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-2.0" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -41,7 +41,7 @@
 Найкоректніший спосіб перевірити умову — використати перевірку <code>isinstance</code>, щоб переконатися, що маєш правильний клас.
 Якщо хочеш підтримувати застарілий атрибут <code>Instruction.condition</code> під час переходу своєї бібліотеки на Qiskit v2.0 і пізніше, можна використати <code>getattr(operation, &quot;condition&quot;, None)</code>, що зазвичай змусить екземпляри <code>Instruction</code> поводитись так само, як у Qiskit v1.x і раніше.</p>
 <p>Оригінальний, застарілий метод підтримки простих умов рівності регістрів у Qiskit полягав у використанні методу <code>c_if</code> на окремих інструкціях або наборах інструкцій.
-Це було суворо менш функціональним, ніж повна форма управляючого потоку, і ніколи не мало належної підтримки на залізі.
+Цей спосіб мав строго менше можливостей, ніж повна форма керування потоком, і ніколи не мав належної підтримки на залізі.
 Цей застарілий метод видалено у Qiskit v2.0; слід використовувати метод <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit#qiskit.circuit.QuantumCircuit.if_test" target="_blank" rel="noopener noreferrer" class=""><code>if_test</code></a> з відповідною умовою.
 Можна продовжувати використовувати 2-tuple форму <code>(register, integer)</code> для представлення рівності регістрів, або використовувати більш виразну <a href="https://docs.quantum.ibm.com/api/qiskit/circuit_classical" target="_blank" rel="noopener noreferrer" class="">підсистему класичних обчислень</a> для більш складних умов.</p>
 <p>Наприклад, раніше ти міг писати:</p>
@@ -99,7 +99,7 @@
 <li class="">
 <p>Надання <code>coupling_map</code> та/або <code>basis_gates</code> разом із <code>backend</code> не рекомендується, і починаючи з
 v2.0 буде видаватися <code>UserWarning</code>. У таких випадках існує кілька джерел правди,
-і така інформація, як похибки вентилів та тривалості з бекенду, не може бути вирішена на основі
+і таку інформацію, як похибки вентилів та тривалості з бекенду, неможливо однозначно визначити (узгодити) на основі
 наданої інформації.
 Рекомендована альтернатива — визначити власний target, що поєднує вибрані обмеження, або
 з нуля, або за допомогою <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.Target#from_configuration" target="_blank" rel="noopener noreferrer" class=""><code>Target.from_configuration</code></a> чи <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.fake_provider.GenericBackendV2" target="_blank" rel="noopener noreferrer" class=""><code>GenericBackendV2</code></a>.</p>
@@ -154,7 +154,7 @@ v2.0 буде видаватися <code>UserWarning</code>. У таких ви�
 <p>поле <code>calibration</code> <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.InstructionProperties" target="_blank" rel="noopener noreferrer" class=""><code>InstructionProperties</code></a>.</p>
 </li>
 </ul>
-<p>Це сталося тому, що IBM Quantum® QPU припинили пропонувати доступ на рівні пульсів, і команда Qiskit більше не мала ресурсів для підтримки маловикористовуваного пакету.
+<p>Це сталося тому, що IBM Quantum® QPU припинили надавати доступ на рівні імпульсів, і команда Qiskit більше не мала ресурсів для підтримки маловикористовуваного пакету.
 Ти можеш продовжувати використовувати модуль <code>qiskit.pulse</code>, використовуючи серію v1.x Qiskit, яка підтримується виправленнями помилок до вересня 2024 року та підтримкою безпеки до березня 2025 року, але модуль видалено із серії v2.x.</p>
 <p>Більшість використань <code>qiskit.pulse</code> можна замінити прямим доступом до дробових вентилів на IBM Quantum Heron QPU (і пізніших поколіннях, якщо застосовно).
 Детальніше можна прочитати у <a class="" href="/guides/pulse-migration">посібнику з міграції з pulse на дробові вентилі</a>.</p>
